@@ -1,5 +1,5 @@
 *, *::after, *::before {
-    box-sizing:border-box;  
+    box-sizing: border-box;  
     list-style: none;
     padding-inline-start: 0;
     padding-inline-end: 0;
@@ -25,14 +25,13 @@ button:not([disabled]) {
 
 
 
-
-
 header {width: 100%; text-align: center; padding: 3rem;}
 
 
 
 
-.data {
+
+#data {
     display: grid;
     grid-template-columns: 1fr repeat(6, 2fr) 1fr;
     grid-template-rows: 1fr;
@@ -41,8 +40,10 @@ header {width: 100%; text-align: center; padding: 3rem;}
 
     
     background-color: rgba(0, 0, 0, .1);
+    /* background-color: rgba(88, 102, 141, 0.1); */
     padding: 10rem 0rem;
     border-radius: 3rem;
+    align-items: end;
 }
 .netherlands { grid-area: 1 / 2 / 2 / 3; }
 .belgium { grid-area: 1 / 3 / 2 / 4; }
@@ -53,17 +54,95 @@ header {width: 100%; text-align: center; padding: 3rem;}
 
 
 
-.country {
-    text-align: center;
 
+
+.country, .province {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgba(110, 142, 231, 0.1);
+    border-radius: 3rem;
+
+    position: relative;
 }
-.country>div {
-    height: 10rem;
+.country::after, .province::after {
+    content: "";
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+    background-color: darkslateblue;
+    color: white;
+    font-weight: bold;
+    font-size: .75rem;
+    text-align: center;
+    line-height: 32px;
+
+    position: absolute;
+    top: -.25rem;
+    right: -.25rem;
+}
+.netherlands::after {content: "133";}
+.belgium::after {content: "15";}
+.germany::after {content: "13";}
+.norway::after {content: "5";}
+.luxemburg::after {content: "5";}
+.usa::after {content: "2";}
+
+.countryContent {display: flex; gap: .5rem; padding-bottom: 2rem;}
+.flag {height: 1.5rem; border-radius: .25rem;}
+
+.dataBar {
+    height: 0rem;
     width: 1rem;
     border-radius: 1rem;
-
     background-color: coral;
-}   
+    transition: .3s ease;
+    margin: 2rem;
+}
+
+
+
+#buttonSection {
+    width: 100%;
+    padding: 5rem 0rem;
+    text-align: center;
+}
+button {padding: .5rem 1rem;}
+
+
+
+
+
+
+
+
+
+
+#netherlandsData {
+    display: grid;
+    grid-template-columns: 1fr repeat(6, 2fr) 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 0px;
+
+    
+    background-color: rgba(0, 0, 0, .1);
+    /* background-color: rgba(88, 102, 141, 0.1); */
+    padding: 10rem 0rem;
+    border-radius: 3rem;
+    align-items: end;
+}
+.zuid-holland { grid-area: 1 / 2 / 2 / 3; }
+.noord-holland { grid-area: 1 / 3 / 2 / 4; }
+.utrecht { grid-area: 1 / 4 / 2 / 5; }
+.zeeland { grid-area: 1 / 5 / 2 / 6; }
+.friesland { grid-area: 1 / 6 / 2 / 7; }
+.limburg { grid-area: 1 / 7 / 2 / 8; }
+
+
+.zuid-holland::after {content: "90";}
+.noord-holland::after {content: "23";}
+.utrecht::after {content: "8";}
+.zeeland::after {content: "6";}
+.friesland::after {content: "3";}
+.limburg::after {content: "3";}

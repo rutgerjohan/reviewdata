@@ -13,40 +13,140 @@
         <title>review data Rutger</title>
     </head>
     <body>
-        <header>Total reviews: <span>130</span></header>
+        <header>
+            <p>Total reviews: <span>173</span></p>
+        </header>
 
         <main>
-            <section class="data">
+            <section id="data">
                 <div class="country netherlands">
-                    <div></div>
-                    <p>The Netherlands</p>
+
+                    <div class="dataBar"></div>
+                    <div class="countryContent">
+                        <img src="images/flag-ne.png" alt="flag" class="flag">
+                        <p>The Netherlands</p>
+                    </div>
                 </div>
+
 
                 <div class="country belgium">
-                    <div></div>
-                    <p>Belgium</p>
+
+                    <div class="dataBar"></div>
+                    <div class="countryContent">
+                        <img src="images/flag-be.png" alt="flag" class="flag">
+                        <p>Belgium</p>
+                    </div>
                 </div>
+
 
                 <div class="country germany">
-                    <div></div>
-                    <p>Germany</p>
+
+                    <div class="dataBar"></div>
+                    <div class="countryContent">
+                        <img src="images/flag-ge.png" alt="flag" class="flag">
+                        <p>Germany</p>
+                    </div>
                 </div>
+
 
                 <div class="country norway">
-                    <div></div>
-                    <p>Norway</p>
+
+                    <div class="dataBar"></div>
+                    <div class="countryContent">
+                        <img src="images/flag-no.png" alt="flag" class="flag">
+                        <p>Norway</p>
+                    </div>
                 </div>
+
 
                 <div class="country luxemburg">
-                    <div></div>
-                    <p>Luxemburg</p>
+
+                    <div class="dataBar"></div>
+                    <div class="countryContent">
+                        <img src="images/flag-lu.png" alt="flag" class="flag">
+                        <p>Luxemburg</p>
+                    </div>
                 </div>
 
+
                 <div class="country usa">
-                    <div></div>
-                    <p>USA</p>
+
+                    <div class="dataBar"></div>
+                    <div class="countryContent">
+                        <img src="images/flag-us.png" alt="flag" class="flag">
+                        <p>USA</p>
+                    </div>
                 </div>
             </section>
+            <div id="buttonSection">
+                <button onclick="addData()">Click to add data</button>
+            </div>
+
+
+
+            <section id="netherlandsData">
+                <div class="province zuid-holland">
+
+                    <div class="dataBar"></div>
+                    <div class="countryContent">
+                        <img src="images/flagNL-zh.png" alt="flag" class="flag">
+                        <p>Zuid-Holland</p>
+                    </div>
+                </div>
+
+
+                <div class="province noord-holland">
+
+                    <div class="dataBar"></div>
+                    <div class="countryContent">
+                        <img src="images/flagNL-nh.svg" alt="flag" class="flag">
+                        <p>Noord-Holland</p>
+                    </div>
+                </div>
+
+
+                <div class="province utrecht">
+
+                    <div class="dataBar"></div>
+                    <div class="countryContent">
+                        <img src="images/flagNL-ut.png" alt="flag" class="flag">
+                        <p>Utrecht</p>
+                    </div>
+                </div>
+                
+
+                <div class="province zeeland">
+
+                    <div class="dataBar"></div>
+                    <div class="countryContent">
+                        <img src="images/flagNL-ze.png" alt="flag" class="flag">
+                        <p>Zeeland</p>
+                    </div>
+                </div>
+                
+
+                <div class="province friesland">
+
+                    <div class="dataBar"></div>
+                    <div class="countryContent">
+                        <img src="images/flagNL-fr.png" alt="flag" class="flag">
+                        <p>Friesland</p>
+                    </div>
+                </div>
+                
+
+                <div class="province limburg">
+
+                    <div class="dataBar"></div>
+                    <div class="countryContent">
+                        <img src="images/flagNL-li.png" alt="flag" class="flag">
+                        <p>Limburg</p>
+                    </div>
+                </div>
+            </section>
+            <div id="buttonSection">
+                <button onclick="dataNetherlands()">Click to add data</button>
+            </div>
         </main>
         
         <script src="script.js"></script>
