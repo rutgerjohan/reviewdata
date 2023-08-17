@@ -31,41 +31,49 @@ header {width: 100%; text-align: center; padding: 3rem;}
 
 
 
-#data {
+
+#reviews {display: flex; flex-direction: column; text-align: center;
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 3rem;
+    padding: 5rem 3rem;
+    margin: 3rem 0rem;
+}
+.dataList {
     display: grid;
-    grid-template-columns: 1fr repeat(6, 2fr) 1fr;
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 16px;
     grid-row-gap: 0px;
-
-    
-    background-color: rgba(0, 0, 0, .1);
-    /* background-color: rgba(88, 102, 141, 0.1); */
-    padding: 10rem 0rem;
-    border-radius: 3rem;
     align-items: end;
+    padding: 3rem;
 }
-.netherlands { grid-area: 1 / 2 / 2 / 3; }
-.belgium { grid-area: 1 / 3 / 2 / 4; }
-.germany { grid-area: 1 / 4 / 2 / 5; }
-.norway { grid-area: 1 / 5 / 2 / 6; }
-.luxemburg { grid-area: 1 / 6 / 2 / 7; }
-.usa { grid-area: 1 / 7 / 2 / 8; }
-
-
-
-
-
-.country, .province {
+.dataItem {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgba(110, 142, 231, 0.1);
     border-radius: 3rem;
+    gap: 2rem;
+    padding: 3rem 2rem;
 
     position: relative;
 }
-.country::after, .province::after {
+.dataBar {
+    height: 15rem;
+    width: 1rem;
+    border-radius: 1rem;
+    background-color: coral;
+    transition: .3s ease;
+}
+.dataInfo {display: flex; gap: .5rem;}
+.dataInfo img {height: 1.5rem; border-radius: .25rem;}
+
+button {padding: .5rem 1rem; margin: 0 auto;}
+
+
+
+
+.dataItem::after {
     content: "";
     height: 2rem;
     width: 2rem;
@@ -88,61 +96,29 @@ header {width: 100%; text-align: center; padding: 3rem;}
 .luxemburg::after {content: "5";}
 .usa::after {content: "2";}
 
-.countryContent {display: flex; gap: .5rem; padding-bottom: 2rem;}
-.flag {height: 1.5rem; border-radius: .25rem;}
-
-.dataBar {
-    height: 0rem;
-    width: 1rem;
-    border-radius: 1rem;
-    background-color: coral;
-    transition: .3s ease;
-    margin: 2rem;
-}
-
-
-
-#buttonSection {
-    width: 100%;
-    padding: 5rem 0rem;
-    text-align: center;
-}
-button {padding: .5rem 1rem;}
-
-
-
-
-
-
-
-
-
-
-#netherlandsData {
-    display: grid;
-    grid-template-columns: 1fr repeat(6, 2fr) 1fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 16px;
-    grid-row-gap: 0px;
-
-    
-    background-color: rgba(0, 0, 0, .1);
-    /* background-color: rgba(88, 102, 141, 0.1); */
-    padding: 10rem 0rem;
-    border-radius: 3rem;
-    align-items: end;
-}
-.zuid-holland { grid-area: 1 / 2 / 2 / 3; }
-.noord-holland { grid-area: 1 / 3 / 2 / 4; }
-.utrecht { grid-area: 1 / 4 / 2 / 5; }
-.zeeland { grid-area: 1 / 5 / 2 / 6; }
-.friesland { grid-area: 1 / 6 / 2 / 7; }
-.limburg { grid-area: 1 / 7 / 2 / 8; }
-
-
 .zuid-holland::after {content: "90";}
 .noord-holland::after {content: "23";}
 .utrecht::after {content: "8";}
 .zeeland::after {content: "6";}
 .friesland::after {content: "3";}
 .limburg::after {content: "3";}
+
+.den-haag::after {content: "72";}
+.amsterdam::after {content: "23";}
+.brussels::after {content: "14";}
+.berlin::after {content: "13";}
+.rotterdam::after {content: "10";}
+
+
+
+
+
+.dataListCity {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 0px;
+    align-items: end;
+    padding: 3rem;
+}

@@ -1,5 +1,7 @@
 var totalAmt = 173;
 
+
+
 var usaAmt = 2;
 var luxemburgAmt = 5;
 var norwayAmt = 5;
@@ -25,7 +27,7 @@ var ze = "6";
 var fr = "3";
 var li = "3";
 
-function dataNetherlands() {
+function addDataNL() {
     giveValue(zh, "zuid-holland");
     giveValue(nh, "noord-holland");
     giveValue(ut, "utrecht");
@@ -36,11 +38,26 @@ function dataNetherlands() {
 
 
 
+var denhaag = "72";
+var amsterdam = "23";
+var brussels = "14";
+var berlin = "13";
+var rotterdam = "10";
+
+function addDataCity() {
+    giveValue(denhaag, "den-haag");
+    giveValue(amsterdam, "amsterdam");
+    giveValue(brussels, "brussels");
+    giveValue(berlin, "berlin");
+    giveValue(rotterdam, "rotterdam");
+}
+
+
 
 
 function giveValue(x, className) {
     var container = document.querySelector("." + className);
     var childDiv = container.querySelector(".dataBar"); // Change this selector to match the actual class or tag name of your child div
-    var newHeight = (25 / totalAmt) * x;
+    var newHeight = (15 / totalAmt) * x;
     childDiv.style.height = newHeight + "rem";
 }
